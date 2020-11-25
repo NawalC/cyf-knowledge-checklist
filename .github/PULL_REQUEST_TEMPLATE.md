@@ -1,17 +1,11 @@
-Thank you for contributing! To help the review process, please provide the following:
+Before sending your Pull Request, be sure to check that you are making the pull request from your branch to the dev branch! Please do not try to push directly into branches on the main repo.
 
-### Proposal
-Provide a short description of the change you are proposing and the reasons for it.
+### What changes have you made?
+Provide a short description of the changes you made and, if necessary, the reasons for these changes.
 
-### Related
-Provide links to any associated pull requests or issues. You can use `#123` to link to a PR or issue in this repository, or `user/repo#123` to link to other repositories.
+### Is there a related issue on GitHub you can link to?
+Add the number of the issue here if one exists
 
-### Checklist
+### After sending your Pull Request
+Please assign a team mate to review your code. All reviewers should leave a comment and either request changes or merge the Pull Request
 
-- [ ] I have read the [code of conduct] and [contributing guide]
-- [ ] I have made this pull request to the `master` branch
-- [ ] I have run all of the automated validation using `npm run ship`
-- [ ] I have added myself to the `"contributors"` list in the `package.json` (or do not want to)
-
-[code of conduct]: https://github.com/textbook/starter-kit/blob/master/.github/CODE_OF_CONDUCT.md
-[contributing guide]: https://github.com/textbook/starter-kit/blob/master/.github/CONTRIBUTING.md

@@ -1,11 +1,434 @@
-.logo {
-    width: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+body {
+  /* margin: 10vh; */
+  font-family: "Raleway", sans-serif;
 }
 
-.message {
-    color: blue;
+* {
+  box-sizing: border-box;
+}
+.main-container {
+  margin-bottom: 10vh;
+}
+.header {
+  position: relative;
+  background-color: #efefef;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.message:hover {
-    background-color: yellow;
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-img {
+  margin-left: 5vw;
+  height: 50%;
+}
+
+.logout-img {
+ width: 68px;
+ height: 68px;
+ margin-right:10px;
+  
+}
+
+.sign-form {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  font-size: larger;
+  margin-bottom: 65px;
+  border-bottom: 5px solid #000;
+}
+
+.signup-form-container {
+  flex-grow: 1;
+}
+
+.signup-container {
+  display: flex;
+}
+
+.sign-form label {
+  margin-top: 2vh;
+}
+
+input {
+  border-radius: 10%;
+}
+
+.submit {
+  background-color: #219653;
+  margin-top: 3vh;
+  color: #efefef;
+  border: none;
+  font-size: 18px;
+  height: 2rem;
+  width: 7rem;
+}
+.submit-btn{
+   background-color: #219653;
+  color: #efefef;
+  border: none;
+  font-size: 18px;
+  height: 2rem;
+  width: 7rem;
+}
+.update-btn {
+  margin-bottom: 10px;
+}
+.update-cancel-btn {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.cancel-btn {
+  background-color: #db4437;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  font-size: larger;
+  margin-top: -500px;
+  background-color: rgb(230, 230, 230);
+  opacity: 0.85;
+}
+
+.login-page label {
+  margin-top: 2vh;
+}
+.welcome-msg {
+  margin-left: 20px;
+}
+.error {
+  color: #ff0033;
+}
+.register {
+  text-align: center;
+  color: #219653;
+  font-size: large;
+}
+.register:hover {
+  color: #219653;
+}
+.signup-link {
+  text-align: center;
+  color: #219653;
+  font-size: large;
+}
+a:link {
+  text-decoration: none;
+}
+.signup-link:hover {
+  background-color: #495464;
+  color: white;
+  padding: 10px;
+  border-bottom: none;
+}
+.signup-prompt {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.edit-lo-container {
+  float: right;
+}
+
+li {
+  list-style: none;
+  font-size: larger;
+  margin-bottom: 1vh;
+  font-size: 26px;
+}
+
+.learning-objective-container {
+  padding-bottom: 60px;
+  background-color: #efefef;
+  position: absolute;
+  margin-left: 25%;
+  margin-bottom: 11vh;
+  width: 60%;
+  padding: 2%;
+}
+.edit-display-container {
+  padding-bottom: 60px;
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 10vh;
+  padding-right: 20px;
+  margin-left: 20px;
+  /* max-width: 100%; */
+}
+.lo-wrapper {
+  background-color: #efefef;
+  display: flex;
+  width: 70%;
+  flex: 1;
+  padding: 30px;
+  margin-left: 30px;
+}
+.lo-list {
+  max-width: 100%;
+  background-color: red;
+}
+.default-skill-display {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 65px;
+}
+
+.default-skill-display:hover {
+  color: #db4437;
+}
+
+.active-skill-display {
+  color: #db4437;
+  font-weight: bolder;
+  background-color: white;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+.skills-container {
+  background-color: #495464;
+  border-radius: 6px;
+  width: 20%;
+  min-height: 100vh;
+  padding: 2%;
+  text-align: left;
+  margin-left: 24px;
+}
+.skillNav-display {
+  display: flex;
+  flex-basis: 300px;
+  background-color: #495464;
+  border-radius: 6px;
+  min-height: 100vh;
+  padding: 2%;
+  text-align: left;
+  margin-left: 80px;
+  margin-right: 20px;
+}
+.studentName-Container {
+  background-color: #495464;
+  border-radius: 6px;
+  width: 25%;
+  min-height: 100vh;
+  padding: 2%;
+  text-align: left;
+  margin-left: 20px;
+}
+.studentName-Container a {
+  color: white;
+}
+.students-name {
+  border-bottom: 1px solid #219653;
+  font-size: 18px;
+  margin-right: 30px;
+  font-weight: 900;
+}
+
+.students-name:focus {
+  color: #db4437;
+  font-size: 18px;
+  margin-right: 30px;
+}
+
+.skills-container A {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.skills-container .edit-btn:not A:hover {
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid whites;
+  text-align: center;
+}
+
+/* .skills-container A:checked {
+  background-color: rgb(18, 88, 90);
+} */
+
+.skills-container A:focus {
+  background-color: white;
+  color: #db4437;
+  font-weight: bolder;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* .current {
+  background-color: yellow;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+} */
+.modal-body .modal-footer {
+  font-size: larger;
+}
+
+.modal-footer button {
+  background-color: #db4437;
+}
+
+/* .delete-btn {
+  float: right;
+}
+
+.edit-btn {
+  float: left;
+} */
+.icon-edit {
+  margin-right: 10px;
+  margin-left: auto;
+}
+.lo-style {
+  width: 100%;
+}
+.edit-delete-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* .add-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.crud:hover {
+  cursor: pointer;
+}
+.add-btn {
+  margin-top: 3vh;
+  width: 7rem;
+  height: 2rem;
+  text-overflow: -50% -50%;
+  border-radius: 5px;
+  background-color: #db4437;
+  color: #efefef;
+}
+
+/* .skill-name {
+  margin-bottom: 10%;
+} */
+
+/* .name-list {
+  font-size: larger;
+} */
+
+/* .student-list {
+  position: relative;
+} */
+
+/* .students-name {
+  position: absolute;
+  margin-left: 10%;
+} */
+
+.app-message__input {
+  min-height: 0.1em;
+  max-height: 50vh;
+  width: 100%;
+}
+
+.dropdown-skill {
+  padding: 5px;
+  margin: 5px 0 8px 0;
+}
+
+.input-label {
+  font-size: 18px;
+}
+.description {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.skillsnav-page {
+  position: relative;
+}
+
+.mentorsview-page {
+  position: relative;
+}
+.mentor-greet {
+  color: white;
+}
+.mentorsedit-page {
+  position: relative;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #efefef;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-input {
+  border-radius: 0%;
+}
+
+.footer-contact img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.footer-submit {
+  background-color: #db4437;
+  color: #efefef;
+}
+.display-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .edit-display-container {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+  }
+  .skillNav-display {
+    width: 100%;
+    margin-left: 0;
+  }
+  .lo-wrapper {
+  width: 100%;
+   margin-left: 0;
+  }
+  .lo-style {
+  width: 100%;
+} 
+.p-0{
+  padding: 0;
+}
 }
