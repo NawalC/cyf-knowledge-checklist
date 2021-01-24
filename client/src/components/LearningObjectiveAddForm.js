@@ -13,7 +13,7 @@ export default function LearningObjectiveAddForm({ getLearningObj }) {
       [event.target.name]: event.target.value,
     };
     setAddDescription(updateInput);
-    console.log(updateInput);
+ 
   }
   async function hadleSubmit(e) {
     e.preventDefault();
@@ -30,8 +30,6 @@ export default function LearningObjectiveAddForm({ getLearningObj }) {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
-
     setAddDescription(initialDescription);
     getLearningObj();
   }
@@ -43,6 +41,7 @@ export default function LearningObjectiveAddForm({ getLearningObj }) {
         <br />
 
         <select name="skill" onChange={handleChange} className="dropdown-skill">
+          <option>Select a skill</option>
           {skills.map((skill) => (
             <option value={skill}>{skillLabel(skill)}</option>
           ))}
