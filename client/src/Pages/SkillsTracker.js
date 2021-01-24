@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import fakeData from "../fakeData.json";
 import BtnContainer from "../components/BtnContainer";
 
 export default function Html({ skill }) {
-  const [xyz, setXyz] = useState([]);
-  console.log();
+  const [descriptions, setDescriptions] = useState([]);
 
   const fetchLearningObj = () => {
     const token = window.localStorage.getItem("token");
@@ -16,7 +14,7 @@ export default function Html({ skill }) {
         if (data.error) {
           throw data;
         }
-        setXyz(data);
+        setDescriptions(data);
       });
   };
   useEffect(fetchLearningObj, [skill]);
@@ -41,8 +39,8 @@ export default function Html({ skill }) {
         }
       })
       .then(fetchLearningObj);
-    setXyz(
-      xyz.map((obj) => {
+    setDescriptions(
+      descriptions.map((obj) => {
         if (obj.id === id) {
           return { ...obj, ability: newAbility };
         }
@@ -53,10 +51,8 @@ export default function Html({ skill }) {
 
   return (
     <div className="learning-objective-container">
-      {/* <p>Welcome {window.localStorage.getItem("name")}</p> */}
-      {/* <h2>{skill}</h2> */}
       <ul>
-        {xyz.map(({ description, id, ability }, index) => {
+        {descriptions.map(({ description, id, ability }, index) => {
           function updateAbility(newAbility) {
             updateAchievement(newAbility, id);
           }
