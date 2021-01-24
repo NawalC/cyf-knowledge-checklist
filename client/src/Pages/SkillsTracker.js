@@ -18,7 +18,7 @@ export default function Html({ skill }) {
       });
   };
   useEffect(fetchLearningObj, [skill]);
-  //fetch here call
+  // call fetch here
 
   function updateAchievement(newAbility, id) {
     fetch(`/api/abilities`, {
