@@ -85,6 +85,8 @@ export default function StudentResultsDisplay({ studentDetail }) {
   return (
     <Accordion>
       {skills.map((skill, index) => {
+        console.log(skills[skill]);
+        console.log(skill);
         return (
           <Card>
             <Card.Header>
