@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import BtnContainer from "../components/BtnContainer";
 
 export default function Html({ skill }) {
-  const [descriptions, setDescriptions] = useState([]);
+  const [learningObjectives, setLearningObjectives] = useState([]);
 
   const fetchLearningObj = () => {
     const token = window.localStorage.getItem("token");
@@ -14,7 +14,7 @@ export default function Html({ skill }) {
         if (data.error) {
           throw data;
         }
-        setDescriptions(data);
+        setLearningObjectives(data);
       });
   };
   useEffect(fetchLearningObj, [skill]);
@@ -39,8 +39,8 @@ export default function Html({ skill }) {
         }
       })
       .then(fetchLearningObj);
-    setDescriptions(
-      descriptions.map((obj) => {
+    setLearningObjectives(
+      learningObjectives.map((obj) => {
         if (obj.id === id) {
           return { ...obj, ability: newAbility };
         }
@@ -52,7 +52,7 @@ export default function Html({ skill }) {
   return (
     <div className="learning-objective-container">
       <ul>
-        {descriptions.map(({ description, id, ability }, index) => {
+        {learningObjectives.map(({ description, id, ability }, index) => {
           function updateAbility(newAbility) {
             updateAchievement(newAbility, id);
           }
