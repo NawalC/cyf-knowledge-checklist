@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
+
 import fakeData from "../fakeData.json";
 import LearningObjectiveAddForm from "./LearningObjectiveAddForm";
 import { useParams } from "react-router-dom";
+import { skills } from "../components/consts/skillsConst";
 
 export default function EditBox() {
   let { id } = useParams();
-  const skills = fakeData[id];
+  // const skills = fakeData[id];
   const [deleted, setDeleted] = useState(skills);
-  // const [learningObjective, setLearningObjective] = useState(skills);
   const [learningObj, setLearningObj] = useState([]);
   const [updateLO, setUpdateLO] = useState("");
   const [text, setText] = useState("");
@@ -21,7 +22,7 @@ export default function EditBox() {
         if (data.error) {
           throw data;
         }
-        console.log(data);
+
         setLearningObj(data);
       });
   };
@@ -63,7 +64,6 @@ export default function EditBox() {
   };
 
   const handleEdit = (description, id) => {
-    console.log("head", id);
     setUpdateLO(id);
     setText(description);
   };
@@ -71,10 +71,7 @@ export default function EditBox() {
     setUpdateLO("");
     getLearningObj();
   };
-  console.log(learningObj);
-  // const addLearningObjective = (description) => {
-  //   setLearningObjective(skills.push(description));
-  // };
+
   return (
     <div className="lo-wrapper">
       <h2 className="skill-name"></h2>
@@ -84,8 +81,6 @@ export default function EditBox() {
             return (
               <li key={index}>
                 <div className="edit-delete-buttons">
-                  {console.log("here is update", updateLO, id)}
-
                   {updateLO == id ? (
                     <textarea
                       className="app-message__input"
