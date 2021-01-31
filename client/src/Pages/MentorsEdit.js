@@ -4,13 +4,11 @@ import {
   Switch,
   Route,
   NavLink,
-  useParams,
 } from "react-router-dom";
 import EditBox from "../components/EditBox";
-
 import Header from "../components/Header";
-
 import Footer from "../components/Footer";
+// import { skills, skillLabel } from "../components/consts/skillsConst";
 
 export default function MentorsEdit() {
   let back = "Students Progress";
@@ -28,14 +26,7 @@ export default function MentorsEdit() {
       <Header logout={logout} back={back} />
       <div className="mentorsedit-page"></div>
 
-      {/* <div className="mentorsedit-page">
-        <Header back={back} />
-      </div> */}
-
       <div className="edit-display-container">
-        {/* <Switch>
-          <Route path="/mentorsedit/:id" children={<EditBox />} />
-        </Switch> */}
         <div className="skillNav-display ">
           <ul>
             <li>
