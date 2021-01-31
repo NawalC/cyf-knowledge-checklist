@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import fakeData from "../fakeData.json";
 import AddForm from "./AddForm";
 import { useParams } from "react-router-dom";
-import { skills } from "../components/consts/skillsConst";
+import { skills } from "./consts/skillsConst";
 
-export default function EditBox() {
-  let { id } = useParams();
-  // const skills = fakeData[id];
-  const [deleted, setDeleted] = useState(skills);
+export default function MentorEditLearningObj() {
+  let { skill } = useParams();
   const [learningObj, setLearningObj] = useState([]);
   const [updateLO, setUpdateLO] = useState("");
   const [text, setText] = useState("");
@@ -15,7 +12,7 @@ export default function EditBox() {
   const token = window.localStorage.getItem("token");
 
   const getLearningObj = () => {
-    fetch(`/api/learningobjectives/${id}`, { headers: { token } })
+    fetch(`/api/learningobjectives/${skill}`, { headers: { token } })
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
@@ -27,7 +24,7 @@ export default function EditBox() {
   };
   useEffect(() => {
     getLearningObj();
-  }, [id]);
+  }, [skill]);
 
   const deleteLearningOb = (LearningID) => {
     fetch(`/api/learningobjectives/${LearningID}`, {

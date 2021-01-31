@@ -5,7 +5,7 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-import EditBox from "../components/EditBox";
+import MentorEditLearningObj from "../components/MentorEditLearningObj";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import { skills, skillLabel } from "../components/consts/skillsConst";
@@ -96,7 +96,10 @@ export default function MentorsEdit() {
         </div>
 
         <Switch>
-          <Route path="/mentorsedit/:id" children={<EditBox />} />
+          <Route
+            path="/mentorsedit/:skill"
+            children={<MentorEditLearningObj />}
+          />
         </Switch>
       </div>
       <Footer />
