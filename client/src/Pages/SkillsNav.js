@@ -66,7 +66,7 @@ export default function SkillsNav() {
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
