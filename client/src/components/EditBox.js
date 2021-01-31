@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import fakeData from "../fakeData.json";
 import AddForm from "./AddForm";
 import { useParams } from "react-router-dom";
 import { skills } from "../components/consts/skillsConst";
 
 export default function EditBox() {
   let { id } = useParams();
-  // const skills = fakeData[id];
   const [deleted, setDeleted] = useState(skills);
   const [learningObj, setLearningObj] = useState([]);
   const [updateLO, setUpdateLO] = useState("");
